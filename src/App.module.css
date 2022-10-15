@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:regular&display=swap);
+
+body {
+  background-color: #606060;
+  font-family: "Roboto Mono";
+  font-size: 18px;
+}
+.app {
+  margin-top: 10%;
+}
+.app__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.app__writeMode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app__card {
+  background-color: #808080;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.app__time {
+  color: #c0c0c0;
+  font-size: 50px;
+  align-self: center;
+  margin: 40px 0px 20px 0px;
+}
+
+.app__input {
+  width: 500px;
+  height: 50px;
+  font-size: 24px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: #c0c0c0;
+  margin: 25px 0;
+  padding-left: 20px;
+}
+.app__results {
+}
+.results__results {
+  display: flex;
+  justify-content: space-around;
+}
+.results__wpm {
+  display: flex;
+  flex-direction: column;
+}
+.wpm__title {
+  color: #c0c0c0;
+  font-size: 50px;
+}
+.wpm__number {
+  color: #c0c0c0;
+  font-size: 100px;
+}
+.results__acc {
+  display: flex;
+  flex-direction: column;
+}
+.acc__title {
+  color: #c0c0c0;
+  font-size: 50px;
+}
+.acc__number {
+  color: #c0c0c0;
+  font-size: 100px;
+}
+.results__button {
+  font-family: "Roboto Mono";
+  font-size: 25px;
+  margin-top: 90px;
+  margin-left: 37%;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0px;
+  cursor: pointer;
+}
