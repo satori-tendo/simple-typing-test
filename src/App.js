@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      
-=======
+import './App.css';   
 import s from './App.module.css'
 import { useEffect, useState } from 'react';
 import randomWords from 'random-words'; 
@@ -38,7 +31,6 @@ function App() {
         : <ResultsMode />
         }
       </div>
->>>>>>> 85129ec (build the UI)
     </div>
   );
 }
