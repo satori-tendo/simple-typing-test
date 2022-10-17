@@ -9,7 +9,8 @@ function App() {
 import s from './App.module.css'
 import { useEffect, useState } from 'react';
 import randomWords from 'random-words'; 
-
+import DefaultMode from './components/DefaultMode/DefaultMode';
+import ResultsMode from './components/ResultsMode/ResultsMode';
 
 const NUMB_OF_WORDS = 100;
 const SECONDS = 60;
@@ -33,33 +34,8 @@ function App() {
     <div className={s.app}>
       <div className={s.app__container}>
         {writeMode 
-        ? <div className={s.app__writeMode}>
-          <div className={s.app__card}>
-            {words.map((word, i) => (
-              <span key={i}>
-                <span>{word}</span>
-                <span> </span>
-              </span>
-            ))}
-          </div>
-          <div className={s.app__time}>60</div>
-          <form>
-            <input className={s.app__input} placeholder='Start typing....'/>
-          </form>
-        </div>
-        : <div className={s.app__results}>
-          <div className={s.results__results}>
-            <div className={s.results__wpm}>
-              <span className={s.wpm__title}>wpm</span>
-              <span className={s.wpm__number}>{50}</span>
-            </div>
-            <div className={s.results__acc}>
-              <span className={s.acc__title}>acc</span>
-              <span className={s.acc__number}>{50}%</span>
-            </div>
-          </div>
-          <button className={s.results__button}>RESET</button>
-        </div>
+        ? <DefaultMode words={words}/>
+        : <ResultsMode />
         }
       </div>
 >>>>>>> 85129ec (build the UI)

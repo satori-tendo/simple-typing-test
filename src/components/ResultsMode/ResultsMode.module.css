@@ -1,0 +1,39 @@
+.results__results {
+  display: flex;
+  justify-content: space-around;
+}
+.results__wpm {
+  display: flex;
+  flex-direction: column;
+}
+.wpm__title {
+  color: #c0c0c0;
+  font-size: 50px;
+}
+.wpm__number {
+  color: #c0c0c0;
+  font-size: 100px;
+}
+.results__acc {
+  display: flex;
+  flex-direction: column;
+}
+.acc__title {
+  color: #c0c0c0;
+  font-size: 50px;
+}
+.acc__number {
+  color: #c0c0c0;
+  font-size: 100px;
+}
+.results__button {
+  font-family: "Roboto Mono";
+  font-size: 25px;
+  margin-top: 90px;
+  margin-left: 37%;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0px;
+  cursor: pointer;
+}
