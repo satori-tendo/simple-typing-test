@@ -12,3 +12,6 @@ body {
   max-width: 1000px;
   margin: 0 auto;
 }
+.app__currentWord {
+  text-decoration: underline;
+}

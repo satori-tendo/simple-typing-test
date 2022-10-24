@@ -1,35 +1,31 @@
-import './App.css';   
 import s from './App.module.css'
 import { useEffect, useState } from 'react';
 import randomWords from 'random-words'; 
 import DefaultMode from './components/DefaultMode/DefaultMode';
-import ResultsMode from './components/ResultsMode/ResultsMode';
 
 const NUMB_OF_WORDS = 100;
-const SECONDS = 60;
 
 
 function App() {
 
   const [words, setWords] = useState([]);
-  const [writeMode, setWriteMode] = useState(true)
-
+  const [mode, setMode] = useState('write')
 
   useEffect(() => {
-    setWords(generateWords())
-  }, [])
+    mode === 'write' && setWords(generateWords())
+  }, [mode])
 
+  const getMode = (value) => {
+    setMode(value)
+  }
   const generateWords = () => {
     return new Array(NUMB_OF_WORDS).fill(null).map(() => randomWords())
   }
-
+  
   return (
     <div className={s.app}>
       <div className={s.app__container}>
-        {writeMode 
-        ? <DefaultMode words={words}/>
-        : <ResultsMode />
-        }
+        <DefaultMode words={words} getMode={getMode}/>
       </div>
     </div>
   );

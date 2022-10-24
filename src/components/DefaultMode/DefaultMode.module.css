@@ -34,3 +34,6 @@
 .app__wordFailure {
   background-color: red;
 }
+.app__currentWord {
+  text-decoration: underline;
+}
